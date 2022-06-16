@@ -20,6 +20,29 @@ class ViewOrderPage extends StatelessWidget {
         title: const Text("view order"),
         centerTitle: true,
       ),
+      bottomNavigationBar: Card(
+        shadowColor:Colors.teal,
+        child: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+              label:"Home",
+              icon:Icon(Icons.home)
+            ),
+            BottomNavigationBarItem(
+                label:"Folder",
+                icon:Icon(Icons.folder)
+            ),
+            BottomNavigationBarItem(
+                label:"Click",
+                icon:Icon(Icons.book_online)
+            ),
+            // BottomNavigationBarItem(
+            //     label:"User",
+            //     icon:Icon(Icons.person_off_rounded)
+            // )
+          ],
+        ),
+      ),
       body: Column(
         children: [
           //*************Gridview Start ************
@@ -42,10 +65,9 @@ class ViewOrderPage extends StatelessWidget {
 
           //*************Main Container start************
           Padding(
-            padding:EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
+            padding:EdgeInsets.symmetric(horizontal: 6.w, vertical: 1.h),
             child: SizedBox(
               width: double.infinity,
-              height: 53.h,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,7 +79,7 @@ class ViewOrderPage extends StatelessWidget {
                   //************* First Container************
                   Container(
                     width: 90.w,
-                    height: 6.h,
+                    height: 5.5.h,
                     decoration: BoxDecoration(
                         color: Colors.grey.shade200,
                         borderRadius: BorderRadius.circular(10)),
@@ -80,7 +102,7 @@ class ViewOrderPage extends StatelessWidget {
                   //************* Second Container************
                   Container(
                     width: 90.w,
-                    height: 6.h,
+                    height: 5.5.h,
                     decoration: BoxDecoration(
                         color: Colors.grey.shade200,
                         borderRadius: BorderRadius.circular(10)),
@@ -95,7 +117,7 @@ class ViewOrderPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  MySizeBox(myHeight: 2.h,),
+                  MySizeBox(myHeight: 1.h,),
                   Padding(
                     padding:EdgeInsets.symmetric(horizontal: 1.w),
                     child: const Text("Signature"),
@@ -103,7 +125,7 @@ class ViewOrderPage extends StatelessWidget {
                   //************* Third Container************
                   Container(
                     width: 90.w,
-                    height: 6.h,
+                    height: 5.5.h,
                     decoration: BoxDecoration(
                         color: Colors.grey.shade200,
                         borderRadius: BorderRadius.circular(10)),
@@ -118,7 +140,7 @@ class ViewOrderPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  MySizeBox(myHeight: 3.h,),
+                  MySizeBox(myHeight: 2.h,),
                   //************* Calendar Row ************
                   Row(
                     children:[
@@ -133,13 +155,13 @@ class ViewOrderPage extends StatelessWidget {
                       const CalendarWidget(myTitle: "/28", myColor:Colors.teal),
                     ],
                   ),
-                  MySizeBox(myHeight: 4.h,),
+                  MySizeBox(myHeight: 3.h,),
                   //************* Saved Button Start************
                   Align(
                     alignment: Alignment.center,
                     child: Container(
                       width: 85.w,
-                      height: 5.5.h,
+                      height: 5.h,
                       decoration: BoxDecoration(
                           color: Colors.tealAccent.shade400,
                         borderRadius: BorderRadius.circular(10),
